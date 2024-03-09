@@ -32,7 +32,7 @@ Antes de executar o projeto, certifique-se de renomear o arquivo .env.example pa
 
 Para iniciar o servidor de desenvolvimento, execute o seguinte comando:
 
-    ```bash
+    ```
     npm start
     ```
 
