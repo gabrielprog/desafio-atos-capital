@@ -43,6 +43,7 @@ Para iniciar o servidor de desenvolvimento, execute o seguinte comando:
 
 ## Imagens
 
+[Imgur](https://imgur.com/BcRH8qF)
 ![Login](https://imgur.com/undefined)
 ![Cadastro](https://imgur.com/yrarQs9)
 ![Ver produtos](https://imgur.com/BcRH8qF)
