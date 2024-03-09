@@ -1,10 +1,16 @@
+import './assets/css/colors.css';
 import './assets/css/global.css';
+import 'react-toastify/dist/ReactToastify.css';
 
-import Routes from "./routes";
+import { ToastContainer } from 'react-toastify';
+import Routers from "./routes";
 
 function App() {
   return (
-    <Routes />
+    <>
+      <Routers />
+      <ToastContainer />
+    </>
   );
 }
 

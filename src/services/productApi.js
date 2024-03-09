@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-    baseURL: process.env.REACT_APP_API_ENDPOINT_AUTH
+    baseURL: process.env.REACT_APP_API_ENDPOINT_PRODUCT
 });
 
 export default api;

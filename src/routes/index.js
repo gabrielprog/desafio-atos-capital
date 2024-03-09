@@ -1,26 +1,45 @@
-import {BrowserRouter, Switch, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Navigate, Route, Routes, useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 
 import Signin from '../pages/Signin';
+import Signup from '../pages/Signup';
 import Dashboard from '../pages/Dashboard';
 
-export default function Routes() {
+import isAuthenticated from '../services/isAuthenticated';
+
+function DashboardRoute() {
+    const navigate = useNavigate();
+  
+    useEffect(() => {
+        async function checkLogin() {
+            const isLogged = await isAuthenticated();
+            
+            if (!isLogged) {
+                navigate('/signin');
+            }
+        }
+        
+        checkLogin();
+    }, [navigate]);
+  
+    return isAuthenticated() ? <Dashboard /> : null;
+  }
+
+export default function Routers() {
     return (
-        <BrowserRouter>
+        <>
+            <Router>
+                <Routes>
+                    <Route index path="/" element={<Navigate to="/signin" />} />
 
-            <Switch>
-                
-                <Route 
-                path="/" 
-                component={ Signin } 
-                exact />
+                    <Route path="/signin" element={<Signin />} />
 
-                <Route 
-                path="/dashboard" 
-                component={ Dashboard } />
-                
+                    <Route path="/signup" element={<Signup />} />
 
-            </Switch>
+                    <Route path="/dashboard/*" element={<DashboardRoute />} />
 
-        </BrowserRouter>
+                </Routes>
+            </Router>
+        </>
     )
 }

@@ -6,5 +6,20 @@
 }
 
 body {
-    background-color: #F9F9F9;
+    background-color: var(--primary-color);
+
+    font-family: 'Poppins', sans-serif;
+}
+a { text-decoration: none; }
+.color-red { color: var(--second-color); }
+.color-gray { color: var(--third-color); }
+.color-black { color: var(--fourth-color); }
+.bg-red { background-color: var(--second-color); color: white; }
+.bg-red:hover { background-color: var(--second-color); color: white; }
+.space-between { justify-content: space-between; }
+.border-right { border-right: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important}
+.border-left { border-left: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important}
+.no-hover:hover {
+    color: inherit !important;
+    background-color: inherit !important;
 }

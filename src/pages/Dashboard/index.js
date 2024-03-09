@@ -1,24 +1,30 @@
 import React from 'react';
 import {Container, Row, Col} from "react-bootstrap";
-import SideBarMenu from '../../Components/SideBarMenu';
+import SideBarMenu from '../../Components/Elements/SideBarMenu';
+import RightSideBarHeader from '../../Components/Elements/RightSideBarHeader';
+import HeaderContent from '../../Components/Elements//HeaderContent';
+import DashboardRoutes from '../DashboardRoutes';
 
 function Dashboard() {
   return (
     <>
-      <Container
-        style={{padding: 0, margin: 0, height: "100%"}}
-      >
-          {/* TODO: conserta o width da sidebar */}
-            <Row>
-                <Col xs={2} id="sidebar-wrapper" style={{ maxWidth: '200px' }}>   
-                  <SideBarMenu />
-                </Col>
-                <Col xs={10} id="page-content-wrapper">
-                    this is a test
-                </Col> 
-            </Row>
+      {/* TODO: Adicionar paginação, e funcionalidade de filtro como pesquisa, quantidade de item por pagina */}
+      <Container fluid>
+        <Row className="p-0">
+          <Col xs={2} id="sidebar-wrapper">
+            <SideBarMenu />
+          </Col>
+          <Col xs={10} className="p-0" id="page-content-wrapper">
+            <Col>
+              <RightSideBarHeader />
 
-        </Container>
+              <HeaderContent />
+
+              <DashboardRoutes />
+            </Col>
+          </Col>
+        </Row>
+      </Container>
     </>
   );
 }
