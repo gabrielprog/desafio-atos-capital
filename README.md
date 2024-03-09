@@ -31,9 +31,9 @@ Antes de executar o projeto, certifique-se de renomear o arquivo .env.example pa
 ## Executando o projeto
 
 Para iniciar o servidor de desenvolvimento, execute o seguinte comando:
-    
+
     ```bash
-        npm start
+    npm start
     ```
 
 ## Débitos técnicos
@@ -44,9 +44,9 @@ Para iniciar o servidor de desenvolvimento, execute o seguinte comando:
 ## Imagens
 
 
-[Login](https://imgur.com/undefined)
-[Cadastro](https://imgur.com/yrarQs9)
-[Ver produtos](https://imgur.com/BcRH8qF)
-[Cadatro produtos](https://imgur.com/Xvg0vXl)
-[Deleta Produtos](https://imgur.com/OUuKflB)
-[Atualizar produtos](https://imgur.com/ab5wxpH)
+- [Login](https://imgur.com/undefined)
+- [Cadastro](https://imgur.com/yrarQs9)
+- [Ver produtos](https://imgur.com/BcRH8qF)
+- [Cadatro produtos](https://imgur.com/Xvg0vXl)
+- [Deleta Produtos](https://imgur.com/OUuKflB)
+- [Atualizar produtos](https://imgur.com/ab5wxpH)
