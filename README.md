@@ -6,7 +6,7 @@ Este é o frontend do desafio da Atos Capital, desenvolvido em React. No final d
 
 ## Configuração
 
-Antes de executar o projeto, certifique-se de renomear o arquivo `.env.example` para `.env` e preencher as variáveis de ambiente necessárias, e está com a api fake rodando, minha recomendação é que use api que está nesse repositório nomeada como "fake-api-jwt-json-server".
+Antes de executar o projeto, certifique-se de renomear o arquivo .env.example para .env e preencher as variáveis de ambiente necessárias. Além disso, verifique se a API fake está em execução. Minha recomendação é seguir as instruções dos exemplos, pois podem ocorrer erros de execução devido à API utilizar a mesma porta que o React usa por padrão.
 
 ## Instalação
 
@@ -43,10 +43,10 @@ Para iniciar o servidor de desenvolvimento, execute o seguinte comando:
 
 ## Imagens
 
-[Imgur](https://imgur.com/BcRH8qF)
-![Login](https://imgur.com/undefined)
-![Cadastro](https://imgur.com/yrarQs9)
-![Ver produtos](https://imgur.com/BcRH8qF)
-![Cadatro produtos](https://imgur.com/Xvg0vXl)
-![Deleta Produtos](https://imgur.com/OUuKflB)
-![Atualizar produtos](https://imgur.com/ab5wxpH)
+
+[Login](https://imgur.com/undefined)
+[Cadastro](https://imgur.com/yrarQs9)
+[Ver produtos](https://imgur.com/BcRH8qF)
+[Cadatro produtos](https://imgur.com/Xvg0vXl)
+[Deleta Produtos](https://imgur.com/OUuKflB)
+[Atualizar produtos](https://imgur.com/ab5wxpH)
