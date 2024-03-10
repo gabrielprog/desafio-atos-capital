@@ -38,7 +38,7 @@ Para iniciar o servidor de desenvolvimento, execute o seguinte comando:
 
 ## Débitos técnicos
 1. Code Style
-2. Padrões de Design
+2. Desing patterns
 3. Poucos Componentes
 
 ## Imagens
