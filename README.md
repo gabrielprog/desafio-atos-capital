@@ -40,9 +40,9 @@ Antes de executar o projeto, certifique-se de renomear o arquivo .env.example pa
 
 ## Débitos técnicos
 1. Code Style
-2. Desing patterns
+2. Desing Patterns
 3. Poucos Componentes
-4. Unit test
+4. Unit Test
 
 ## Imagens
 
