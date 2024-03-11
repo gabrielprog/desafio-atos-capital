@@ -48,7 +48,7 @@ Para iniciar o servidor de desenvolvimento, execute o seguinte comando:
 
 - [Login](https://imgur.com/undefined)
 - [Cadastro](https://imgur.com/yrarQs9)
-- [Ver produtos](https://imgur.com/SjLyYLz)
+- [Ver produtos](https://imgur.com/LPp48g5)
 - [Cadatro produtos](https://imgur.com/Xvg0vXl)
 - [Deleta Produtos](https://imgur.com/OUuKflB)
 - [Atualizar produtos](https://imgur.com/ab5wxpH)
