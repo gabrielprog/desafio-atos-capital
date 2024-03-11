@@ -32,7 +32,7 @@ Antes de executar o projeto, certifique-se de renomear o arquivo .env.example pa
 
 ## Executando o projeto
 
-Para iniciar o servidor de desenvolvimento, execute o seguinte comando:
+1. Para iniciar o servidor de desenvolvimento, execute o seguinte comando:
 
     ```
     npm start
@@ -46,9 +46,9 @@ Para iniciar o servidor de desenvolvimento, execute o seguinte comando:
 ## Imagens
 
 
-- [Login](https://imgur.com/undefined)
+- [Login](https://imgur.com/LJSsevx)
 - [Cadastro](https://imgur.com/yrarQs9)
-- [Ver produtos](https://imgur.com/LPp48g5)
+- [Ver produtos](https://imgur.com/vkx0q2W)
 - [Cadatro produtos](https://imgur.com/Xvg0vXl)
 - [Deleta Produtos](https://imgur.com/OUuKflB)
 - [Atualizar produtos](https://imgur.com/ab5wxpH)
