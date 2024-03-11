@@ -6,6 +6,9 @@ import ButtonDelete from '../../Buttons/ButtonDelete';
 import ButtonEdit from '../../Buttons/ButtonEdit';
 import UpdateProduct from '../../Modals/UpdateProduct';
 
+import formatNumberToRealEnglish from '../../../infrastructure/priceFormat';
+import timezone from '../../../infrastructure/timezone';
+
 function Table({description, categorie, dateCreated, code, price, onDelete, id}) {
     const [show, setShow] = useState(false);
 
@@ -18,9 +21,9 @@ function Table({description, categorie, dateCreated, code, price, onDelete, id})
         <tr>
           <th>{description}</th>
           <td>{categorie}</td>
-          <td>{dateCreated}</td>
+          <td>{timezone(dateCreated)}</td>
           <th>{code}</th>
-          <td>{price}</td>
+          <td>{formatNumberToRealEnglish(price)}</td>
           <td>
             <Row>
               <Col xs="auto">

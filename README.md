@@ -4,6 +4,8 @@ Este é o frontend do desafio da Atos Capital, desenvolvido em React. No final d
 
  - Video da aplicação: https://youtu.be/2hkY6bN5H3U
 
+Retificação dia 10/03: No vídeo, a data de cadastro e os preços não estão formatados. Esse erro passou despercebido e não se trata de um erro de conhecimento, mas sim de uma falha humana. O código já foi corrigido e as imagens no final deste texto contêm as atualizações mencionadas nesta retificação.
+
 ## Configuração
 
 Antes de executar o projeto, certifique-se de renomear o arquivo .env.example para .env e preencher as variáveis de ambiente necessárias. Além disso, verifique se a API fake está em execução. Minha recomendação é seguir as instruções dos exemplos, pois podem ocorrer erros de execução devido à API utilizar a mesma porta que o React usa por padrão.
@@ -32,7 +34,7 @@ Antes de executar o projeto, certifique-se de renomear o arquivo .env.example pa
 
 Para iniciar o servidor de desenvolvimento, execute o seguinte comando:
 
-    ```bash
+    ```
     npm start
     ```
 
@@ -46,7 +48,7 @@ Para iniciar o servidor de desenvolvimento, execute o seguinte comando:
 
 - [Login](https://imgur.com/undefined)
 - [Cadastro](https://imgur.com/yrarQs9)
-- [Ver produtos](https://imgur.com/BcRH8qF)
+- [Ver produtos](https://imgur.com/SjLyYLz)
 - [Cadatro produtos](https://imgur.com/Xvg0vXl)
 - [Deleta Produtos](https://imgur.com/OUuKflB)
 - [Atualizar produtos](https://imgur.com/ab5wxpH)

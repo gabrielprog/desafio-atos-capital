@@ -31,7 +31,7 @@ function UpdateProduct({ show, handleClose, describe, categorie, pCode, price, i
                 "dsProduto": description,
                 "dsCategoria": category,
                 "cdProduto": code,
-                "vlProduto": value
+                "vlProduto": parseInt(value)
             };
             
             try {

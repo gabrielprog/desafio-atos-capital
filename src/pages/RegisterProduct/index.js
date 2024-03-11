@@ -34,9 +34,9 @@ function RegisterProduct() {
                 "dsProduto": description,
                 "dsCategoria": category,
                 "cdProduto": code,
-                "vlProduto": value,
+                "vlProduto": parseFloat(value),
                 "dtCadastro": new Date(), 
-                "qtdProduto": quantity
+                "qtdProduto": parseInt(quantity)
             };
             
             try {
