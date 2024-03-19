@@ -1,11 +1,11 @@
-import {BrowserRouter as Router, Navigate, Route, Routes, useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
+import {BrowserRouter as Router, Navigate, Route, Routes, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
-import Signin from '../pages/Signin';
-import Signup from '../pages/Signup';
-import Dashboard from '../pages/Dashboard';
+import Signin from "../pages/Signin";
+import Signup from "../pages/Signup";
+import Dashboard from "../pages/Dashboard";
 
-import isAuthenticated from '../services/isAuthenticated';
+import isAuthenticated from "../services/isAuthenticated";
 
 function DashboardRoute() {
     const navigate = useNavigate();
@@ -15,7 +15,7 @@ function DashboardRoute() {
             const isLogged = await isAuthenticated();
             
             if (!isLogged) {
-                navigate('/signin');
+                navigate("/signin");
             }
         }
         
@@ -23,7 +23,7 @@ function DashboardRoute() {
     }, [navigate]);
   
     return isAuthenticated() ? <Dashboard /> : null;
-  }
+}
 
 export default function Routers() {
     return (
@@ -41,5 +41,5 @@ export default function Routers() {
                 </Routes>
             </Router>
         </>
-    )
+    );
 }

@@ -1,14 +1,14 @@
-import React from 'react';
+import React from "react";
 
 function ButtonDelete({onClick}) {
-  return (
-    <button
-      className="btn btn-danger"
-      onClick={onClick}
-    >
+    return (
+        <button
+            className="btn btn-danger"
+            onClick={onClick}
+        >
       Deletar
-    </button>
-  );
+        </button>
+    );
 }
 
 export default ButtonDelete;

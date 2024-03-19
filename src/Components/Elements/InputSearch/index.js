@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 function InputSearch({onChange, value, disbabled = false}){
     return (
@@ -11,6 +11,6 @@ function InputSearch({onChange, value, disbabled = false}){
             disabled={disbabled}
         />
     );
-};
+}
 
 export default InputSearch;

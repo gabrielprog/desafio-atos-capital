@@ -1,14 +1,14 @@
-import React from 'react';
+import React from "react";
 
 function ButtonEdit({onClick}) {
-  return (
-    <button
-      className="btn btn-primary"
-      onClick={onClick}
-    >
+    return (
+        <button
+            className="btn btn-primary"
+            onClick={onClick}
+        >
       Editar
-    </button>
-  );
+        </button>
+    );
 }
 
 export default ButtonEdit;

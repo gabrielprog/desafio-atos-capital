@@ -1,39 +1,39 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 import { Container, FormSelect } from "react-bootstrap";
-import { FaSearch } from 'react-icons/fa';
+import { FaSearch } from "react-icons/fa";
 
-import ColumnSplited from '../../Components/Elements/ColumnSplited';
-import InputSearch from '../../Components/Elements/InputSearch';
-import { MDBTable, MDBTableHead} from 'mdb-react-ui-kit';
+import ColumnSplited from "../../Components/Elements/ColumnSplited";
+import InputSearch from "../../Components/Elements/InputSearch";
+import { MDBTable, MDBTableHead} from "mdb-react-ui-kit";
 import Pagination from "react-bootstrap/Pagination";
-import Table from '../../Components/Elements/Table';
-import Title from '../../Components/Elements/Title';
-import api from '../../services/productApi';
-import timezoneFormated from '../../infrastructure/timezone';
-import { toast } from 'react-toastify';
+import Table from "../../Components/Elements/Table";
+import Title from "../../Components/Elements/Title";
+import api from "../../services/productApi";
+import timezoneFormated from "../../infrastructure/timezone";
+import { toast } from "react-toastify";
 
 function Products() {
 
     const timezone = timezoneFormated();
     const [products, setProducts] = useState([]);
     const [lastUpdate, setLastUpdate] = useState(timezone);
-    const [search, setSearch] = useState('');
+    const [search, setSearch] = useState("");
     const [page, setPage] = useState(1);
     const [limit, setLimit] = useState(2);
-    const [sort, setSort] = useState('');
+    const [sort, setSort] = useState("");
     const [pagination, setPagination] = useState({
         first: 1,
         last: 1,
     });
 
     const sortOptions = [
-        { label: 'dsProduto', value: 'Produtos'},
-        { label: 'dsCategoria', value: 'Categoria'},
-        { label: 'cdProduto', value: 'Codigo Produtos'},
-        { label: 'vlProduto', value: 'Valor Produtos'},
-        { label: 'dtCadastro', value: 'Data de cadastro'},
-        { label: 'qtdProduto', value: 'Quantidade de Produtos'},
-    ]
+        { label: "dsProduto", value: "Produtos"},
+        { label: "dsCategoria", value: "Categoria"},
+        { label: "cdProduto", value: "Codigo Produtos"},
+        { label: "vlProduto", value: "Valor Produtos"},
+        { label: "dtCadastro", value: "Data de cadastro"},
+        { label: "qtdProduto", value: "Quantidade de Produtos"},
+    ];
 
     const handleDelete = async (id) => {
         const response = await api.delete(`/products/${id}`);
@@ -42,7 +42,7 @@ function Products() {
             toast.success("Produto deletado com sucesso!");
             setProducts(products.filter(product => product.id !== id));
         }
-    }
+    };
 
     const fetchProducts = async () => {
         const response = await api.get(`/products?q=${search}&_page=${page}&_limit=${limit}&_sort=${sort}`);
@@ -53,44 +53,44 @@ function Products() {
             
             const linkHeader = response.headers?.link;
             
-            if (linkHeader !== '' && linkHeader !== undefined && linkHeader !== null) {
-                const pages = linkHeader.split(', ').reduce((acc, link) => {
-                const [url, rel] = link.split('; ');
-                const urlMatch = url.match(/<(.*)>/);
-                const relMatch = rel.match(/rel="(.*)"/);
+            if (linkHeader !== "" && linkHeader !== undefined && linkHeader !== null) {
+                const pages = linkHeader.split(", ").reduce((acc, link) => {
+                    const [url, rel] = link.split("; ");
+                    const urlMatch = url.match(/<(.*)>/);
+                    const relMatch = rel.match(/rel="(.*)"/);
 
-                if (urlMatch && relMatch) {
-                    const params = new URLSearchParams(urlMatch[1]);
-                    const page = params.get('_page');
-                    if (page) {
-                        acc[relMatch[1]] = page;
+                    if (urlMatch && relMatch) {
+                        const params = new URLSearchParams(urlMatch[1]);
+                        const page = params.get("_page");
+                        if (page) {
+                            acc[relMatch[1]] = page;
+                        }
                     }
-                }
-                return acc;
+                    return acc;
                 }, {});
       
                 setPagination(pages);
             }
         }
-    }
+    };
 
     const renderPagination = () => {
 
         return(
             <Pagination className="px-4">
                 <Pagination.Prev onClick={() => { 
-                        if(pagination.first != page) setPage(page - 1); 
-                    }
+                    if(pagination.first != page) setPage(page - 1); 
+                }
                 } />
                 <Pagination.Item>{page}</Pagination.Item>
                 <Pagination.Next onClick={() => { 
-                        if(pagination.last != page) setPage(page + 1); 
-                    }
+                    if(pagination.last != page) setPage(page + 1); 
+                }
                 } />
             </Pagination>
-        )
+        );
 
-    }
+    };
 
     useEffect(() => {
         fetchProducts();
@@ -149,20 +149,20 @@ function Products() {
             </ColumnSplited>
 
             <Container className="mt-5 d-flex flex-column align-items-center">
-            <MDBTable>
-                <MDBTableHead>
-                <tr>
-                    <th scope='col'>Descrição</th>
-                    <th scope='col'>Categoria</th>
-                    <th scope='col'>Data Cadastro</th>
-                    <th scope='col'>Cód. Produto</th>
-                    <th scope='col'>Preço</th>
-                    <th scope='col'>Ação</th>
-                </tr>
-                </MDBTableHead>
+                <MDBTable>
+                    <MDBTableHead>
+                        <tr>
+                            <th scope='col'>Descrição</th>
+                            <th scope='col'>Categoria</th>
+                            <th scope='col'>Data Cadastro</th>
+                            <th scope='col'>Cód. Produto</th>
+                            <th scope='col'>Preço</th>
+                            <th scope='col'>Ação</th>
+                        </tr>
+                    </MDBTableHead>
                 
-                {products && products.map((product) => (
-                    product.dsProduto &&
+                    {products && products.map((product) => (
+                        product.dsProduto &&
                     <Table 
                         key={product.id}
                         id={product.id}
@@ -173,9 +173,9 @@ function Products() {
                         price={product.vlProduto}
                         onDelete={() => handleDelete(product.id)}
                     />
-                ))}
-            </MDBTable>
-            {renderPagination()}
+                    ))}
+                </MDBTable>
+                {renderPagination()}
             </Container>
 
         </Container>
