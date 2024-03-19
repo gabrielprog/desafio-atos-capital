@@ -6,6 +6,8 @@ Este é o frontend do desafio da Atos Capital, desenvolvido em React. No final d
 
 Retificação dia 10/03: No vídeo, a data de cadastro e os preços não estão formatados. Esse erro passou despercebido e não se trata de um erro de conhecimento, mas sim de uma falha humana. O código já foi corrigido e as imagens no final deste texto contêm as atualizações mencionadas nesta retificação.
 
+Retificação dia 19/03: Foi solicitada uma atualização para uma nova API e decidi usar o princípio do OCP para que a aplicação não fosse quebrada.
+
 ## Configuração
 
 Antes de executar o projeto, certifique-se de renomear o arquivo .env.example para .env e preencher as variáveis de ambiente necessárias. Além disso, verifique se a API fake está em execução. Minha recomendação é seguir as instruções dos exemplos, pois podem ocorrer erros de execução devido à API utilizar a mesma porta que o React usa por padrão.
