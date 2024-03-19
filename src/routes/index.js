@@ -1,9 +1,11 @@
-import {BrowserRouter as Router, Navigate, Route, Routes, useNavigate } from "react-router-dom";
-import { useEffect } from "react";
+import React from "react";
 
+import { useEffect } from "react";
+import { Navigate, Route, BrowserRouter as Router, Routes, useNavigate } from "react-router-dom";
+
+import Dashboard from "../pages/Dashboard";
 import Signin from "../pages/Signin";
 import Signup from "../pages/Signup";
-import Dashboard from "../pages/Dashboard";
 
 import isAuthenticated from "../services/isAuthenticated";
 

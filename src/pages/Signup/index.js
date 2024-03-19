@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { Container, Row, Col } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 
+import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import ButtonDefault from "../../Components/Buttons/ButtonDefault";
 import Form from "../../Components/Elements/Form";
 import InputDefault from "../../Components/Inputs/InputDefault";
-import ButtonDefault from "../../Components/Buttons/ButtonDefault";
 import art from "../../assets/images/art.svg";
-import { useNavigate } from "react-router-dom";
 import api from "../../services/coreApi";
 
 function Signup() {
@@ -40,7 +40,8 @@ function Signup() {
         if(isValidForm()) {
             const data = {
                 email,
-                password
+                password,
+                name
             };
       
             try {

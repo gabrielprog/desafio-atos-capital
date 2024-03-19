@@ -2,15 +2,15 @@ import React, { useEffect, useState } from "react";
 import { Container, FormSelect } from "react-bootstrap";
 import { FaSearch } from "react-icons/fa";
 
+import { MDBTable, MDBTableHead } from "mdb-react-ui-kit";
+import Pagination from "react-bootstrap/Pagination";
+import { toast } from "react-toastify";
 import ColumnSplited from "../../Components/Elements/ColumnSplited";
 import InputSearch from "../../Components/Elements/InputSearch";
-import { MDBTable, MDBTableHead} from "mdb-react-ui-kit";
-import Pagination from "react-bootstrap/Pagination";
 import Table from "../../Components/Elements/Table";
 import Title from "../../Components/Elements/Title";
-import api from "../../services/productApi";
 import timezoneFormated from "../../infrastructure/timezone";
-import { toast } from "react-toastify";
+import api from "../../services/productApi";
 
 function Products() {
 
@@ -19,7 +19,7 @@ function Products() {
     const [lastUpdate, setLastUpdate] = useState(timezone);
     const [search, setSearch] = useState("");
     const [page, setPage] = useState(1);
-    const [limit, setLimit] = useState(2);
+    const [limit, setLimit] = useState(25);
     const [sort, setSort] = useState("");
     const [pagination, setPagination] = useState({
         first: 1,
